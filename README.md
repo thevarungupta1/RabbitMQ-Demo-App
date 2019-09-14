@@ -51,20 +51,23 @@ dotnet restore
 
 You need three consoles open. Two will run the Worker program. These consoles will be our two consumers - C1 and C2.
 
-> shell 1
+shell 1
 cd Worker
 dotnet run
- => [*] Waiting for messages. To exit press CTRL+C
+
+=> [*] Waiting for messages. To exit press CTRL+C
 
 
-> shell 2
+shell 2
 cd Worker
 dotnet run
- => [*] Waiting for messages. To exit press CTRL+C
+
+=> [*] Waiting for messages. To exit press CTRL+C
+
 In the third one we'll publish new tasks. Once you've started the consumers you can publish a few messages:
 
 
-> shell 3
+shell 3
 cd NewTask
 dotnet run "First message."
 dotnet run "Second message.."
